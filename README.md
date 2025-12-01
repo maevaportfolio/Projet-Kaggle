@@ -63,8 +63,8 @@ flu-prediction/
 ├── docs/                          # Documentation
 │   └── doc_data_StationMeteo.pdf
 │
-├── requirements.txt               # Dépendances Python
-├── .gitignore
+├── pyproject.toml               # Dépendances Python
+├── uv.lock
 └── README.md
 ```
 
@@ -81,5 +81,5 @@ source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate  # Windows
 
 # Installer les dépendances
-pip install -r requirements.txt
+pip install -r requirements.txt  # A changer, on travaille avec uv nous
 ```
