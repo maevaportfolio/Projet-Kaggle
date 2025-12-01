@@ -75,7 +75,7 @@ git clone https://github.com/votre-equipe/flu-prediction.git
 cd flu-prediction
 ```
 
-# Créer environnement virtuel
+#### Créer environnement virtuel
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
@@ -86,7 +86,7 @@ source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate  # Windows
 ```
 
-# Installer les dépendances
+#### Installer les dépendances
 ```bash
 pip install -r requirements.txt  # A changer, on travaille avec uv nous
 ```
