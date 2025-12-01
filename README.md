@@ -18,13 +18,7 @@ flu-prediction/
 │   │   │   └── *.csv (22 fichiers)
 │   │   └── estim-pop-areg-sexe-gca-1975-2015.xls
 │   │
-│   └── processed/                 # Données transformées
-│       ├── meteo_hebdo_region.csv
-│       ├── google_hebdo_region.csv
-│       ├── demo_hebdo_region.csv
-│       ├── features_temporelles.csv
-│       ├── train_enriched.csv
-│       └── test_enriched.csv
+│
 │
 ├── notebooks/                     # Notebooks Jupyter
 │   ├── 01_EDA_train_test.ipynb           # Exploration données principales merge avec train
@@ -54,18 +48,13 @@ flu-prediction/
 │   │   ├── baseline.py           # Modèles baseline
 │   │   └── ml_models.py          # Modèles ML (RF, XGBoost...)
 │   │
-│   └── utils/
-│       ├── __init__.py
-│       ├── metrics.py            # Calcul RMSE et autres métriques
-│       └── visualization.py      # Fonctions de visualisation
 │
 ├── results/                       # Résultats et soumissions
 │   ├── submissions/
 │   │   ├── submission_baseline.csv
 │   │   ├── submission_v1.csv
 │   │   └── submission_final.csv
-│   │
-│   └── model_comparison.csv       # Comparaison des performances
+│   
 │
 ├── reports/                       # Rapports et présentations
 │   ├── rapport_final.pdf
