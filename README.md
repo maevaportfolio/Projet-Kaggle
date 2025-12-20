@@ -91,13 +91,14 @@ venv\Scripts\activate  # Windows
 
 
 ```bash
-pip installl uv
+pip install uv
 ```
 
 #### Installer les dépendances
 ```bash
 uv sync --locked
 ```
+
 
 
 
