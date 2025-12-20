@@ -10,7 +10,6 @@ flu-prediction/
 │   ├── raw/                               # Données brutes (non transformées)
 │   │   ├── train.csv
 │   │   ├── test.csv
-│   │   ├── sample_submission.csv
 │   │   ├── ListedesStationsMeteo.csv
 │   │   ├── DonneesMeteorologiques/
 │   │   │   └── synop.YYYYWW.csv            # Données météo hebdomadaires
@@ -20,38 +19,32 @@ flu-prediction/
 │   │
 │   ├── processed/                         # Données transformées / finales
 │   │   ├── Google_trend_clean.xlsx        # Requêtes Google avec noms de colonnes normalisés
-│   │   ├── google_trend_consolidated.xlsx # Consolidation de tous les CSV Google
-│   │   │                                  # → 1 fichier Excel, 1 feuille par région
-│   │   │                                  # → en-têtes non normalisées
-│   │   ├── Google_trends_requetes.xlsx    # Train final Google Trends
-│   │   │                                  # → 1 seule feuille
-│   │   │                                  # → fusion de 9 fichiers finaux de requêtes
+│   │   ├── google_trend_consolidated.xlsx # Consolidation de tous les CSV Google  → 1 fichier Excel, 1 feuille par région → en-têtes non normalisées        
+│   │   ├── Google_trends_requetes.xlsx    # Train final Google Trends, 1 seule feuille, fusion de 9 fichiers finaux de requêtes                  
+│   │   │                                  
 │   │   ├── pop_train.csv                  # Données démographiques normalisées (train)
 │   │   ├── pop_test.csv                   # Données démographiques normalisées (test)
-│   │   └── train_finale.csv               # Dataset final
-│   │                                      # → concaténation démographie + Google Trends + train
+│   │   └── train_finale.csv               # Dataset final :  concaténation démographie + Google Trends + train
+│   │                                     
 │
-├── notebooks/                             # Notebooks Jupyter
+├── notebooks/                             
 │   ├── 01_EDA_test_melina.ipynb            # EDA du test (travail de Melina)
-│   ├── 01_preprocessing_train.ipynb       # Merge démographie + météorologie
-│   ├── 011_preprocessing_demographique.ipynb
-│   │                                      # Préprocessing complet pour obtenir :
-│   │                                      # train final (démographie + requêtes + train)
+│   ├── 01_preprocessing_train.ipynb        # Merge démographie + météorologie
+│   ├── 011_preprocessing_demographique.ipynb  #Préprocessing complet pour obtenir : train final (démographie + requêtes + train)                           
 │
-├── src/                                   # Code source Python
+├── src/                                  
 │   ├── __pycache__/                       # Cache Python
-│   ├── preprocessing.py                  # Fonctions utilitaires utilisées
-│   │                                      # dans les notebooks de preprocessing
+│   ├── preprocessing.py                  # Fonctions utilitaires utilisées : dans les notebooks de preprocessing                                    
 │
 ├── results/                               # Résultats du modèle
-│   ├── sample_submissions/                # Fichiers de soumission
-│   │   └── sample_submission.csv
+│   ├── submissions/                
+│   │   └── sample_submission.csv          # Fichiers de soumission du prof
 │
 ├── reports/                               # Rapports et présentations
 │   ├── rapport_final.pdf
 │   └── presentation.pptx
 │
-├── docs/                                  # Documentation
+├── docs/                                  
 │   └── doc_data_StationMeteo.pdf
 │
 ├── .python-version                        # Version Python utilisée
@@ -83,3 +76,4 @@ venv\Scripts\activate  # Windows
 ```bash
 pip install -r requirements.txt  # A changer, on travaille avec uv nous
 ```
+
