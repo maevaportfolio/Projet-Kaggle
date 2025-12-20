@@ -71,8 +71,16 @@ source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate  # Windows
 ```
 
+#### Installer UV
+
+
+```bash
+pip installl uv
+```
+
 #### Installer les dépendances
 ```bash
 uv sync --locked
 ```
+
 
