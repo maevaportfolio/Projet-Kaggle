@@ -47,7 +47,6 @@ flu-prediction/
 ├── docs/                                  
 │   └── doc_data_StationMeteo.pdf
 │
-├── .python-version                        # Version Python utilisée
 ├── pyproject.toml                         # Dépendances et configuration du projet
 ├── uv.lock                                # Lockfile des dépendances
 └── README.md                              # Documentation principale
@@ -73,7 +72,6 @@ venv\Scripts\activate  # Windows
 ```
 
 #### Installer les dépendances
-```bash
-pip install -r requirements.txt  # A changer, on travaille avec uv nous
-```
+
+
 
