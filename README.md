@@ -1,6 +1,18 @@
 ## 🦠 Prédiction du Taux de Grippe - Projet Machine Learning
 
-Prédiction hebdomadaire du taux de grippe par région française à partir de données météo, démographiques et Google Analytics.
+Ce projet vise à prédire l’intensité de la grippe par **région** et par **semaine**, en combinant plusieurs sources de données :
+- Données épidémiologiques
+- Données météorologiques
+- Requêtes Google Trends
+- Données démographiques
+
+L’objectif est de construire un **dataset final enrichi** pour l’entraînement de modèles de machine learning.
+
+---
+
+### Prérequis
+- Python **3.12**
+- `uv` comme gestionnaire de dépendances
 
 ### 📂 Structure du projet
 ```
@@ -31,7 +43,10 @@ flu-prediction/
 │   ├── 01_EDA_test_melina.ipynb            # EDA du test (travail de Melina)
 │   ├── 01_preprocessing_train.ipynb        # Merge démographie + météorologie
 │   ├── 011_preprocessing_demographique.ipynb  #Préprocessing complet pour obtenir : train final (démographie + requêtes + train)
-│   ├── 02_EDA_demography_prop,piynb        # EDA du train qui comprend les donnees demographqiues et de population                      
+│   ├── 02_EDA_demographique_pop.ipynb      # EDA donnees demographiques+pop avec train
+│   ├── 03_EDA_donneesmeteo.ipynb           # EDA donnees meteo avec train
+│   ├── 04_EDA_final.ipynb                  # EDA fusion avec toutes les donnees (meteo, demographiques, pop et train)  feature engeneering et choix du modele
+│   ├── 05_notebook_final.ipynb             # feature engeneering et modelisation
 │
 ├── src/                                  
 │   ├── __pycache__/                       # Cache Python
@@ -83,6 +98,9 @@ pip installl uv
 ```bash
 uv sync --locked
 ```
+
+
+
 
 
 
