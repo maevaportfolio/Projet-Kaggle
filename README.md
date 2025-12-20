@@ -6,66 +6,59 @@ Prédiction hebdomadaire du taux de grippe par région française à partir de d
 ```
 flu-prediction/
 │
-├── data/                          # Données brutes (non versionnées)
-│   ├── raw/
+├── data/                                   # Données du projet
+│   ├── raw/                               # Données brutes (non transformées)
 │   │   ├── train.csv
 │   │   ├── test.csv
 │   │   ├── sample_submission.csv
 │   │   ├── ListedesStationsMeteo.csv
 │   │   ├── DonneesMeteorologiques/
-│   │   │   └── synop.YYYYWW.csv (multiples fichiers)
+│   │   │   └── synop.YYYYWW.csv            # Données météo hebdomadaires
 │   │   ├── RequetesGoogleParRegion/
-│   │   │   └── *.csv (22 fichiers)
+│   │   │   └── *.csv                       # 22 fichiers CSV (1 par région)
 │   │   └── estim-pop-areg-sexe-gca-1975-2015.xls
 │   │
+│   ├── processed/                         # Données transformées / finales
+│   │   ├── Google_trend_clean.xlsx        # Requêtes Google avec noms de colonnes normalisés
+│   │   ├── google_trend_consolidated.xlsx # Consolidation de tous les CSV Google
+│   │   │                                  # → 1 fichier Excel, 1 feuille par région
+│   │   │                                  # → en-têtes non normalisées
+│   │   ├── Google_trends_requetes.xlsx    # Train final Google Trends
+│   │   │                                  # → 1 seule feuille
+│   │   │                                  # → fusion de 9 fichiers finaux de requêtes
+│   │   ├── pop_train.csv                  # Données démographiques normalisées (train)
+│   │   ├── pop_test.csv                   # Données démographiques normalisées (test)
+│   │   └── train_finale.csv               # Dataset final
+│   │                                      # → concaténation démographie + Google Trends + train
 │
+├── notebooks/                             # Notebooks Jupyter
+│   ├── 01_EDA_test_melina.ipynb            # EDA du test (travail de Melina)
+│   ├── 01_preprocessing_train.ipynb       # Merge démographie + météorologie
+│   ├── 011_preprocessing_demographique.ipynb
+│   │                                      # Préprocessing complet pour obtenir :
+│   │                                      # train final (démographie + requêtes + train)
 │
-├── notebooks/                     # Notebooks Jupyter
-│   ├── 01_EDA_train_test.ipynb           # Exploration données principales merge avec train
-│   ├── 02_EDA_meteo.ipynb                # Analyse données météo merge avec train
-│   ├── 03_EDA_google.ipynb               # Analyse Google Analytics merge avec train
-│   ├── 04_EDA_demographie.ipynb          # Analyse démographie merge avec train
-│   ├── 05_integration_donnees.ipynb      # Merge de toutes les sources
-│   ├── 06_baseline_models.ipynb          # Modèles de référence
-│   ├── 07_modeling_ML.ipynb              # Modèles ML avancés
-│   └── 08_final_predictions.ipynb        # Génération submission finale
+├── src/                                   # Code source Python
+│   ├── __pycache__/                       # Cache Python
+│   ├── preprocessing.py                  # Fonctions utilitaires utilisées
+│   │                                      # dans les notebooks de preprocessing
 │
-├── src/                           # Code source Python
-│   ├── data_processing/
-│   │   ├── __init__.py
-│   │   ├── load_meteo.py         # Chargement et agrégation météo
-│   │   ├── load_google.py        # Chargement et transformation Google
-│   │   ├── load_demo.py          # Chargement et interpolation démographie
-│   │   └── merge_data.py         # Pipeline d'intégration
-│   │
-│   ├── features/
-│   │   ├── __init__.py
-│   │   ├── temporal_features.py  # Features temporelles
-│   │   └── lag_features.py       # Features retardées
-│   │
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── baseline.py           # Modèles baseline
-│   │   └── ml_models.py          # Modèles ML (RF, XGBoost...)
-│   │
+├── results/                               # Résultats du modèle
+│   ├── sample_submissions/                # Fichiers de soumission
+│   │   └── sample_submission.csv
 │
-├── results/                       # Résultats et soumissions
-│   ├── submissions/
-│   │   ├── submission_baseline.csv
-│   │   ├── submission_v1.csv
-│   │   └── submission_final.csv
-│   
-│
-├── reports/                       # Rapports et présentations
+├── reports/                               # Rapports et présentations
 │   ├── rapport_final.pdf
 │   └── presentation.pptx
 │
-├── docs/                          # Documentation
+├── docs/                                  # Documentation
 │   └── doc_data_StationMeteo.pdf
 │
-├── pyproject.toml               # Dépendances Python
-├── uv.lock
-└── README.md
+├── .python-version                        # Version Python utilisée
+├── pyproject.toml                         # Dépendances et configuration du projet
+├── uv.lock                                # Lockfile des dépendances
+└── README.md                              # Documentation principale
+
 ```
 
 ## 🚀 Installation
