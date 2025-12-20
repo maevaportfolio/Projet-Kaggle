@@ -30,7 +30,8 @@ flu-prediction/
 ├── notebooks/                             
 │   ├── 01_EDA_test_melina.ipynb            # EDA du test (travail de Melina)
 │   ├── 01_preprocessing_train.ipynb        # Merge démographie + météorologie
-│   ├── 011_preprocessing_demographique.ipynb  #Préprocessing complet pour obtenir : train final (démographie + requêtes + train)                           
+│   ├── 011_preprocessing_demographique.ipynb  #Préprocessing complet pour obtenir : train final (démographie + requêtes + train)
+│   ├── 02_EDA_demography_prop,piynb        # EDA du train qui comprend les donnees demographqiues et de population                      
 │
 ├── src/                                  
 │   ├── __pycache__/                       # Cache Python
@@ -82,5 +83,6 @@ pip installl uv
 ```bash
 uv sync --locked
 ```
+
 
 
