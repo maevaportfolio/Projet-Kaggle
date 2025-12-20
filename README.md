@@ -72,6 +72,7 @@ venv\Scripts\activate  # Windows
 ```
 
 #### Installer les dépendances
-
-
+```bash
+uv sync --locked
+```
 
