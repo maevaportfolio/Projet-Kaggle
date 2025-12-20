@@ -1,6 +1,18 @@
 ## 🦠 Prédiction du Taux de Grippe - Projet Machine Learning
 
-Prédiction hebdomadaire du taux de grippe par région française à partir de données météo, démographiques et Google Analytics.
+Ce projet vise à prédire l’intensité de la grippe par **région** et par **semaine**, en combinant plusieurs sources de données :
+- Données épidémiologiques
+- Données météorologiques
+- Requêtes Google Trends
+- Données démographiques
+
+L’objectif est de construire un **dataset final enrichi** pour l’entraînement de modèles de machine learning.
+
+---
+
+### Prérequis
+- Python **3.12**
+- `uv` comme gestionnaire de dépendances
 
 ### 📂 Structure du projet
 ```
@@ -86,6 +98,7 @@ pip installl uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
