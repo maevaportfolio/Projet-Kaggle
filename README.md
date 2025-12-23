@@ -78,9 +78,9 @@ flu-prediction/
 ├── docs/                                  
 │   └── doc_data_StationMeteo.pdf
 │
-├── pyproject.toml                             # Dépendances et configuration du projet
-├── uv.lock                                    # Lockfile des dépendances
-└── README.md                                  # Documentation principale
+├── pyproject.toml                              # Dépendances et configuration du projet
+├── uv.lock                                     # Lockfile des dépendances
+└── README.md                                   # Documentation principale
 
 ```
 
@@ -113,6 +113,7 @@ pip installl uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
