@@ -30,15 +30,15 @@ flu-prediction/
 │   │   └── estim-pop-areg-sexe-gca-1975-2015.xls
 │   │
 │   ├── processed/                         # Données transformées / finales
-│   │   ├── Google_trend_clean.xlsx        # Requêtes Google avec noms de colonnes normalisés
-│   │   ├── google_trend_consolidated.xlsx # Consolidation de tous les CSV Google  → 1 fichier Excel, 1 feuille par région → en-têtes non normalisées        
-│   │   ├── Google_trends_requetes.xlsx    # Train final Google Trends, 1 seule feuille, fusion de 9 fichiers finaux de requêtes                  
+│   │   ├── google_trend_clean.xlsx        # Requêtes Google avec noms de colonnes normalisés
+│   │   ├── google_trend_consolide.xlsx # Consolidation de tous les CSV Google  → 1 fichier Excel, 1 feuille par région → en-têtes non normalisées        
+│   │   ├── google_trends_requetes.xlsx    # Train final Google Trends, 1 seule feuille, fusion de 9 fichiers finaux de requêtes                  
 │   │   │                                  
 │   │   ├── pop_train.csv                  # Données démographiques normalisées (train)
 │   │   ├── pop_test.csv                   # Données démographiques normalisées (test)
-│   │   └── train_finale.csv               # Dataset final :  concaténation démographie + Google Trends + train
-│   │                                     
-│
+│   │   └── train.csv                      # Dataset final :  concaténation démographie + Google Trends + train
+│   │   ├── train_final.csv                                 
+│       └── test.csv
 ├── notebooks/                             
 │   ├── 01_EDA_test_melina.ipynb            # EDA du test (travail de Melina)
 │   ├── 01_preprocessing_train.ipynb        # Merge démographie + météorologie
@@ -98,6 +98,7 @@ pip install uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
