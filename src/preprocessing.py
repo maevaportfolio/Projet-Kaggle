@@ -3,6 +3,7 @@
 import pandas as pd
 import unicodedata
 from IPython.display import display
+from typing import List
 
 #---------------- Preprocessing principal
 def normalize_region_name(text):
@@ -163,4 +164,41 @@ def consolidate_trends_to_single_sheet(input_file, output_file):
     print(f"Dimensions finales : {final_df.shape}")
     return final_df
 
+#----------------
+
+# Preprocessing données météo 
+def split_meteo_files(
+    files: List[Path],
+    start_year: int,
+    end_year: int
+) -> List[Path]:
+    """
+    Sépare les fichiers météo synop.*.csv selon une plage d'années.
+
+    Les fichiers doivent être nommés sous la forme : synop.YYYYMM.csv
+
+    Parameters
+    ----------
+    files : list of Path
+        Liste des chemins vers les fichiers météo.
+    start_year : int
+        Année de début (incluse).
+    end_year : int
+        Année de fin (incluse).
+
+    Returns
+    -------
+    list of Path
+        Liste des fichiers correspondant à la plage temporelle.
+    """
+    selected_files = []
+
+    for f in files:
+        # synop.YYYYMM.csv → YYYY
+        year = int(f.stem.split(".")[1][:4])
+
+        if start_year <= year <= end_year:
+            selected_files.append(f)
+
+    return selected_files
 #----------------
