@@ -36,9 +36,10 @@ flu-prediction/
 │   │   │                                  
 │   │   ├── pop_train.csv                  # Données démographiques normalisées (train)
 │   │   ├── pop_test.csv                   # Données démographiques normalisées (test)
-│   │   └── train.csv                      # Dataset final :  concaténation démographie + Google Trends + train
-│   │   ├── train_final.csv                                 
-│       └── test.csv
+│   │   ├──  train.csv                     # Dataset final v1:  concaténation démographie + Google Trends + train
+│   │   ├── train_final.csv                # Dataset Final V2 : Avec suppression des colonnes inutiles            
+│   │   ├──  test.csv                      # Dataset final v1 : concaténation démographie + Google Trends + test
+│
 ├── notebooks/                             
 │   ├── 01_EDA_test_melina.ipynb            # EDA du test (travail de Melina)
 │   ├── 01_preprocessing_train.ipynb        # Merge démographie + météorologie
@@ -98,6 +99,7 @@ pip install uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
