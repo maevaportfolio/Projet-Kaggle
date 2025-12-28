@@ -44,15 +44,15 @@ flu-prediction/
 │       
 ├── notebooks/                             
 │   ├── 01_EDA_train_melina.ipynb               # EDA du test (travail de Melina) LA PIERRE FONDATRICE
-│   ├── 01_preprocessing_train_test.ipynb            # Merge démographie + météorologie 
-│   ├──── 011_preprocessing_pop_requetes.ipynb  # Préprocessing complet pour obtenir : train et test final (démographie + requêtes + train)
-│   ├──── 012_preprocessing_meteo.ipynb         # Préprocessing complet pour obtenir : train et test final (démographie + meteo)
-│   ├── 02_EDA_final.ipynb                      # EDA fusion avec toutes les donnees
+│   ├── 01_preprocessing_train_test.ipynb       # Merge final du 011 et 012
+│   ├──── 011_preprocessing_pop_requetes.ipynb  # Préprocessing complet pour obtenir : train et test final (démographie + requêtes + train ET démographie + requêtes + test)
+│   ├──── 012_preprocessing_meteo.ipynb         # Préprocessing complet pour obtenir : train et test final (meteo + train ET meteo + test)
+│   ├── 02_EDA_final.ipynb                      # EDA fusion avec toutes les données
 │   ├──── 021_EDA_pop_requetes.ipynb            # EDA donnees demographiques + pop avec train
 │   ├──── 022_EDA_meteo.ipynb                   # EDA donnees meteo avec train
 │   ├── 03_Modélisation.ipynb                   # Modélisations finales
 │   ├──── 031_Modélisation_pop_requetes.ipynb   # Modélisations Roland et Maeva
-│   └──── 032_Modélisation_meteo.ipynb          # Modélisations MeliNa et Anastasiia
+│   └──── 032_Modélisation_meteo.ipynb          # Modélisations Melina et Anastasiia
 │
 ├── src/                                  
 │   ├── __pycache__/                            # Cache Python
@@ -113,6 +113,7 @@ pip installl uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
