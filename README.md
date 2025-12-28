@@ -44,9 +44,9 @@ flu-prediction/
 │       
 ├── notebooks/                             
 │   ├── 01_EDA_train_melina.ipynb               # EDA du test (travail de Melina) LA PIERRE FONDATRICE
-│   ├── 01_preprocessing_train.ipynb            # Merge démographie + météorologie 
-│   ├──── 011_preprocessing_pop_requetes.ipynb  # Préprocessing complet pour obtenir : train final (démographie + requêtes + train)
-│   ├──── 012_preprocessing_meteo.ipynb         # Préprocessing complet pour obtenir : train final (démographie + meteo)
+│   ├── 01_preprocessing_train_test.ipynb            # Merge démographie + météorologie 
+│   ├──── 011_preprocessing_pop_requetes.ipynb  # Préprocessing complet pour obtenir : train et test final (démographie + requêtes + train)
+│   ├──── 012_preprocessing_meteo.ipynb         # Préprocessing complet pour obtenir : train et test final (démographie + meteo)
 │   ├── 02_EDA_final.ipynb                      # EDA fusion avec toutes les donnees
 │   ├──── 021_EDA_pop_requetes.ipynb            # EDA donnees demographiques + pop avec train
 │   ├──── 022_EDA_meteo.ipynb                   # EDA donnees meteo avec train
@@ -113,6 +113,7 @@ pip installl uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
