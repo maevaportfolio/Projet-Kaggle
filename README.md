@@ -53,6 +53,7 @@ flu-prediction/
 │   ├── 03_Modélisation.ipynb                   # Modélisations finales
 │   ├──── 031_Modélisation_pop_requetes.ipynb   # Modélisations Roland et Maeva
 │   └──── 032_Modélisation_meteo.ipynb          # Modélisations Melina et Anastasiia
+│   └────Modelisation_final.ipynb               # Modélisation avec features importance
 │
 ├── src/                                  
 │   ├── __pycache__/                            # Cache Python
@@ -113,6 +114,7 @@ pip installl uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
