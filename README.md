@@ -1,4 +1,4 @@
-## 🦠 Prédiction du Taux de Grippe - Projet Machine Learning
+## Prédiction du Taux de Grippe - Projet Machine Learning
 
 Ce projet vise à prédire l’intensité de la grippe par **région** et par **semaine**, en combinant plusieurs sources de données :
 - Données épidémiologiques
@@ -14,7 +14,7 @@ L’objectif est de construire un **dataset final enrichi** pour l’entraîneme
 - Python **3.12**
 - `uv` comme gestionnaire de dépendances
 
-### 📂 Structure du projet
+### Structure du projet
 ```
 flu-prediction/
 │
@@ -113,13 +113,14 @@ venv\Scripts\activate  # Windows
 
 
 ```bash
-pip installl uv
+pip install uv
 ```
 
 #### Installer les dépendances
 ```bash
 uv sync --locked
 ```
+
 
 
 
