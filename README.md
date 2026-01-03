@@ -18,6 +18,58 @@ L’objectif est de construire un **dataset final enrichi** pour l’entraîneme
 ```
 flu-prediction/
 │
+├── data/
+│   ├── raw/                                # Données brutes (non transformées)
+│   │   ├── train.csv                        
+│   │   ├── test.csv
+│   │   ├── ListedesStationsMeteo.csv
+│   │   ├── DonneesMeteorologiques/
+│   │   │   └── synop.YYYYWW.csv            # Données météo hebdomadaires
+│   │   ├── RequetesGoogleParRegion/
+│   │   │   └── *.csv                       # 22 fichiers CSV (1 par région)
+│   │   └── estim-pop-areg-sexe-gca-1975-2015.xls
+│   ├── processed/          # Données nettoyées et prêtes pour la modélisation
+│   └── data_modelisation/  # Jeux train_full/test_full finaux pour les modèles
+│
+├── notebooks/
+│   ├── 01_preprocessing_train_test.ipynb
+│   ├── 011_preprocessing_pop_requetes.ipynb
+│   ├── 012_preprocessing_train_meteo.ipynb
+│   ├── 013_preprocessing_test_meteo.ipynb
+│   ├── 02_EDA_pop_requetes_meteo.ipynb
+│   ├── Modélisation_finale_100.ipynb
+│   └── pour_se_guider/     # Notebooks de référence / support pédagogique
+│
+├── src/
+│   ├── preprocessing.py   # Fonctions de préparation des données
+│   ├── eda.py              # Fonctions d’analyse exploratoire
+│   └── catboost_ancien_meilleur_score.py
+│
+├── results/
+│   ├── img/                # Graphiques et visualisations
+│   └── submissions/        # Fichiers de soumission Kaggle
+│
+├── docs/
+│   └── doc_data_StationMeteo.pdf
+|
+├── reports/                # Rapports et présentations
+│   ├── rapport_final.pdf
+│   └── presentation.pptx
+│
+├── deleted_files/          # Archives et anciens scripts (non utilisés)
+│
+├── README.md
+├── pyproject.toml
+├── uv.lock
+└── .python-version
+
+
+
+
+
+
+flu-prediction/
+│
 ├── data/                                   # Données du projet
 │   ├── raw/                                # Données brutes (non transformées)
 │   │   ├── train.csv                        
@@ -114,6 +166,7 @@ pip installl uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
