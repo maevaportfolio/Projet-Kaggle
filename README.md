@@ -32,23 +32,19 @@ flu-prediction/
 │   ├── processed/          # Données nettoyées, enrichies et fusionnées
 │   │   ├── train.csv
 │   │   ├── test.csv
-│   │   ├── train_full.csv
-│   │   ├── test_full.csv
 │   │   ├── train_with_meteo.csv
 │   │   ├── test_with_meteo.csv
 │   │   ├── train_meteo_full.csv
 │   │   ├── test_meteo_full.csv
 │   │   ├── train_meteo_reduit.csv
 │   │   ├── test_meteo_reduit.csv
-│   │   ├── train_synop_cleaned_full_variables.csv
 │   │   ├── train_synop_merged_inner.csv
 │   │   ├── test_synop_merged_inner.csv
 │   │   ├── pop_train.csv
 │   │   ├── pop_test.csv
 │   │   ├── google_trends_clean.xlsx
 │   │   ├── google_trends_consolide.xlsx
-│   │   ├── google_trends_requetes.xlsx
-│   │   └── FINAL_TEST.csv
+│   │   └── google_trends_requetes.xlsx
 │   │
 │   └── data_modelisation/  # Jeux finaux prêts pour l'entraînement et l'inférence
 │       ├── train_full.csv  # Jeu d'entraînement final (features complètes)
@@ -120,6 +116,7 @@ pip install uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
