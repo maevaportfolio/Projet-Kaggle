@@ -82,9 +82,6 @@ flu-prediction/
 ├── uv.lock
 └── .python-version
 
-
-
-
 ```
 
 ## 🚀 Installation
@@ -116,6 +113,7 @@ pip install uv
 ```bash
 uv sync --locked
 ```
+
 
 
 
